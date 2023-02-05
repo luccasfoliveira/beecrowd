@@ -1,4 +1,4 @@
-n1= input().split()
+n1 = input().split()
 for i in range(len(n1)):
     n1[i] = int(n1[i])
 
