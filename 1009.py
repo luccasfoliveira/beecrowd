@@ -1,0 +1,5 @@
+nome_funcionario = str(input(''))
+salario_fixo = float(input(''))
+total_vendas = float(input(''))
+total_final = float(salario_fixo + (total_vendas * 15 / 100))
+print(f'TOTAL = R$ {total_final:.2f}')
