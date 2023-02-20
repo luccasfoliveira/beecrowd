@@ -1,10 +1,13 @@
-x, soma= 1, 0
-while x <= 2:
-    while True:
-        n = float(input())
-        if 0 <= n <= 10:
-            soma += n
-            break
+x, soma= 0, 0
+while True:
+    n = float(input())
+    if 0 <= n <= 10:
+        soma += n
+        x += 1
+    else:
         print('nota invalida')
-    x += 1
+
+    if x == 2:
+        break
+
 print('media =', f'{soma/2:.2f}')
