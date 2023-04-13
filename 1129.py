@@ -1,19 +1,19 @@
+LETRAS = ["A", "B", "C", "D", "E"]
 while True:
     n = int(input())
     if n == 0:
         break
     for j in range(n):
-        LETRAS = ["A", "B", "C", "D", "E"]
         notas = list(map(int, input().split()))
-        for i in range(5):
-            if notas[i] <= 127:
-                notas[i] = True
-                if notas.count(True) > 1:
+        count = 0
+        for i in notas:
+            if i <= 127:
+                count += 1
+                if count > 1:
                     break
-            else:
-                notas[i] = False
+                letra = i
 
-        if notas.count(True) == 1:
-            print(LETRAS[notas.index(True)])
+        if count == 1:
+            print(LETRAS[notas.index(letra)])
         else:
             print('*')
